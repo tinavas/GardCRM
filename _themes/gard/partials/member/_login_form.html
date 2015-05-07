@@ -1,0 +1,38 @@
+{{ 
+member:login_form 
+return="member/dashboard" 
+attr: class:login|id:login
+allow_request_return: true
+}}
+
+    {{ if error }}
+        <p class="error">{{ error }}</p>
+    {{ endif }}
+
+    <div class="input-group">
+        <input type="text" name="username" value="{{ old_values:username }}" id="username">
+        <label for="username">Your Username</label>
+        
+        {{ if field_errors:username }}
+            <br>
+            <small class="error">{{ field_errors:username }}</small>
+        {{ endif }}
+        
+    </div>
+
+    <div class="input-group">
+        <input type="password" name="password" value="" id="password">
+        <label for="password">Your Password</label>
+        
+        {{ if field_errors:password }}
+            <br>
+            <small class="error">{{ field_errors:password }}</small>
+        {{ endif }}
+        
+    </div>
+
+    <div class="input-group">
+        <input type="submit" value="Log in">
+    </div>
+
+{{ /member:login_form }}

@@ -1,0 +1,71 @@
+{{ if logged_in }}
+
+<a href="/member/dashboard">Back</a>
+
+<div class="grid  text--center">
+	<div class="grid__item  lap-and-up-one-whole">
+		<form action="" method="get">
+			<label for="postcode">Postcode</label>
+			<input type="text" name="postcode" value="">
+			<br>
+			<label for="title">Title</label>
+			<input type="text" name="title" value="">
+			<br>
+			<button type="submit">search</button>
+		</form>
+		<hr>
+	</div>
+</div>
+
+<div class="grid  grid--center">
+	<div class="grid__item  lap-and-up-one-half">
+		{{ placid url="api.postcodes.io/postcodes/{get:postcode}" cache="0" refresh="1200" }}
+    		{{ result }}
+				<h2>Result</h2>
+				<ul>
+					<li>Postcode: {{ postcode }}</li>
+					<li>{{ latitude }}, {{ longitude }}</li>
+					<li>{{ admin_district }}, {{ admin_county }}</li>
+				</ul>
+				<hr>
+				
+				{{ entries:listing folder="forms" locate_with="where" center_point="{latitude},{longitude}" sort_by="distance" sort_dir="asc" }}
+					
+				<div class="grid">
+					<div class="grid__item  lap-and-up-one-half">
+						{{ location:map_url url="{ url }" locate_with="where" open_popup="true" zoom="10" }}
+							{{ if no_results }}
+								<p>Sorry, couldn’t find a map for this.</p>
+							{{ else }}
+    							<h3>{{ company_name }} - {{ city }}</h3>
+								<p>{{ city }}</p>
+								<p>
+									{{ where:name }}
+									<br>
+									{{ distance_km|round:1 }}miles
+								</p>
+							{{ endif }}
+						{{ /location:map_url }} 
+					</div>
+					<div class="grid__item  lap-and-up-one-half">
+						<p>
+							<a href="{{url}}">{{ contact_name }} - {{ city }} - {{ postcode }}</a>
+							<br>
+							{{ distance_km|round:1 }}miles {{ coordinates }}
+						</p>
+					</div>
+				</div>
+				{{ /entries:listing }}
+
+    		{{ /result }}
+		{{ /placid }}
+	</div>
+</div>
+
+{{ endif }}
+
+<style>
+	.map {width:100%; height: 300px; }
+</style>
+{{ location:start_maps }}
+<!-- This needs trimming down as it is currently very clunky. It also does not allow you to search via a particular segment of a postcode.  -->

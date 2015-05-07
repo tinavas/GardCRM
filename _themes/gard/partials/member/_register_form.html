@@ -1,0 +1,56 @@
+{{ 
+member:register_form
+return="member/dashboard" 
+attr: class:login|id:login
+allow_request_return: true
+}}
+
+    {{ if error }}
+        <p class="error">{{ error }}</p>
+    {{ endif }}
+
+    <div>
+        <input type="text" name="username" value="{{ old_values:username }}" id="username">
+        <label for="username">Username</label>
+        
+        {{ if field_errors:username }}
+            <br>
+            <small class="error">{{ field_errors:username }}</small>
+        {{ endif }}
+    </div>
+
+    <div>
+        <input type="email" name="email" value="{{ old_values:email }}" id="email">
+        <label for="email">Email</label>
+        
+        {{ if field_errors:email }}
+            <br>
+            <small class="error">{{ field_errors:email }}</small>
+        {{ endif }}
+    </div>
+
+    <div>
+        <input type="password" name="password" value="" id="password">
+        <label for="password">Password</label>
+        
+        {{ if field_errors:password }}
+            <br>
+            <small class="error">{{ field_errors:password }}</small>
+        {{ endif }}
+    </div>
+
+    <div>
+        <input type="password" name="password_confirmation" value="" id="password_confirmation">
+        <label for="password_confirmation">Password Again</label>
+        
+        {{ if field_errors:password_confirmation }}
+            <br>
+            <small class="error">{{ field_errors:password_confirmation }}</small>
+        {{ endif }}
+    </div>
+
+    <div>
+        <input type="submit" name="submit" value="Sign up">
+    </div>
+
+{{ /member:register_form }}

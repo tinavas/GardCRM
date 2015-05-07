@@ -1,0 +1,18 @@
+---
+title: Dashboard
+---
+
+{{ if logged_in }}
+    <h1>Hello {{ username }}</h1>
+    <h4>Welcome to Gard CRM</h4>
+
+    <p>What would you like to do today?</p>
+
+<a href="/member/customer-form">Create Contact</a>
+<br>
+<a href="/member/search">Search Contact</a>
+<br>
+<a href="/member/update-profile">Update Profile</a>
+<br>
+<a href="{{ member:logout_url  return="/" }}" class="button">Log Out</a>
+{{ endif }}

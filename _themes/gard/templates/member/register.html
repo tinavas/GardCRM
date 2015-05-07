@@ -1,0 +1,15 @@
+---
+title: Register
+---
+
+<div class="grid  text--center">
+    <div class="grid__item  lap-and-up-one-whole">
+        <div class="awesome-form">
+            {{ if !logged_in }}
+                {{ theme:partial src="member/_register_form" }}
+            {{ else }}
+                {{ theme:partial src="member/dashboard" }}
+            {{ endif }}
+        </div>
+    </div>
+</div>

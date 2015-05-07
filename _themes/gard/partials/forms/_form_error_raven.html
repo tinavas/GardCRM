@@ -1,0 +1,16 @@
+{{ if {raven:has_errors} }}
+    <h2>Aww snap! You got errors bro.</h2>
+
+    <ul>
+        {{ raven:errors }}
+            {{ missing }}
+                <li>{{ field }} is required</li>
+            {{ /missing }}
+
+            {{ invalid }}
+                <li>{{ field }}: {{ message }}</li>
+            {{ /invalid }}
+        {{ /raven:errors }}
+    </ul>
+
+{{ endif }}

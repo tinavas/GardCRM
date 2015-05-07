@@ -1,0 +1,12 @@
+<div class="grid  text--center">
+    <div class="grid__item  lap-and-up-one-whole">
+        {{ if logged_in }}
+            {{ entries:listing folder="forms" conditions="member:{current_member:_uid}" where="city == title || postcode == title" }}
+
+        <p>{{ city }}</p>
+        <p>{{ postcode }}</p>
+
+            {{ /entries:listing }}
+        {{ endif }}
+    </div>
+</div>
