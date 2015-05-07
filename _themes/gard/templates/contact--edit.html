@@ -45,8 +45,8 @@
 									displayJsonResult($result, data);
 								
 									//var json = $.parseJSON(data);
-									$("#lat").val( 'latitude: ' + data.result.latitude );
-									$("#lon").val( 'longitude: ' + data.result.longitude );
+									$("#lat").val( data.result.latitude );
+									$("#lon").val( data.result.longitude );
 								})
 								.fail(function (error) {
 									displayJsonResult($result, error.responseJSON);
