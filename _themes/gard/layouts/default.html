@@ -13,7 +13,6 @@
 
 		<!-- styles -->
 		{{ theme:css src="style" tag="true" }}
-		{{ theme:css tag="true" }}
 
 		<!-- favicon -->
 		<link rel="shortcut icon" type="image/png" href="{{ theme:img src="favicon.png" }}">
@@ -21,10 +20,6 @@
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	</head>
 	<body>
-        <div class="grid">
-            <div class="grid__item  lap-and-up-one-whole">
-                {{ layout_content }}
-            </div>
-        </div>
+        {{ layout_content }}
 	</body>
 </html>

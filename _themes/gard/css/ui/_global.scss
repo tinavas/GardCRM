@@ -1,0 +1,32 @@
+.wrap {
+	width: 95%;
+	max-width: 1024px;
+	margin: 0 auto;
+	position: relative;
+}
+
+
+// Major page sections
+
+section {
+	padding: 3em 1em;
+}
+
+.section--yellow {
+	background-color: $yellow;
+}
+
+
+// Positioning
+
+.t--left {
+	text-align: left;
+}
+
+.t--right {
+	text-align: right;
+}
+
+.t--center {
+	text-align: center;
+}

@@ -86,7 +86,7 @@ control_panel:
     - website
     - email
     - postcode
-	- years
+    - years
   metrics:
     -
       type: average

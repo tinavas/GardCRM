@@ -1,9 +1,5 @@
-{{ 
-member:login_form 
-return="member/dashboard" 
-attr: class:login|id:login
-allow_request_return: true
-}}
+
+{{ member:login_form return="member/dashboard" attr: class:login|id:login allow_request_return: true }}
 
     {{ if error }}
         <p class="error">{{ error }}</p>

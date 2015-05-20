@@ -3102,6 +3102,96 @@ label,
 /**
  * She’s all yours, cap’n... Begin importing your stuff here.
  */
+.wrap {
+  width: 95%;
+  max-width: 1024px;
+  margin: 0 auto;
+  position: relative; }
+
+section {
+  padding: 3em 1em; }
+
+.section--yellow {
+  background-color: #FFEB3B; }
+
+.t--left {
+  text-align: left; }
+
+.t--right {
+  text-align: right; }
+
+.t--center {
+  text-align: center; }
+
+.btn--blue {
+  display: inline-block;
+  background-color: #2196F3;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  position: relative;
+  border-radius: 0.275em;
+  border: 0 none;
+  padding: 1em 3em 1em;
+  font-weight: 700;
+  color: white !important;
+  text-align: center;
+  font-size: 1em;
+  line-height: 1 !important;
+  white-space: normal;
+  max-width: 20em;
+  margin-bottom: 0.25em; }
+  .btn--blue:hover {
+    cursor: pointer;
+    background-color: #1c7fce;
+    text-decoration: none; }
+
+.btn--green {
+  display: inline-block;
+  background-color: #4CAF50;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  position: relative;
+  border-radius: 0.275em;
+  border: 0 none;
+  padding: 1em 3em 1em;
+  font-weight: 700;
+  color: white !important;
+  text-align: center;
+  font-size: 1em;
+  line-height: 1 !important;
+  white-space: normal;
+  max-width: 20em;
+  margin-bottom: 0.25em; }
+  .btn--green:hover {
+    cursor: pointer;
+    background-color: #409444;
+    text-decoration: none; }
+
+.btn--reversed {
+  display: inline-block;
+  background-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  position: relative;
+  border-radius: 0.275em;
+  border: 0 none;
+  padding: 1em 3em 1em;
+  font-weight: 700;
+  color: white !important;
+  text-align: center;
+  font-size: 1em;
+  line-height: 1 !important;
+  white-space: normal;
+  max-width: 20em;
+  margin-bottom: 0.25em;
+  border: solid 2px white; }
+  .btn--reversed:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.15);
+    text-decoration: none; }
+  .btn--reversed:hover {
+    background-color: #4a4a4a; }
+
 .awesome-form {
   padding-top: 1%; }
 
