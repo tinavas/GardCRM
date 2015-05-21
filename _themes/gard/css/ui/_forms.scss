@@ -1,38 +1,40 @@
 .awesome-form {
-    padding-top: 1%;
+    padding-top: 4em;
 }
 
 input {
-    background: none;
-    border: solid 2px #21a1e1;
-    color: #21a1e1;
-    padding: 15px 40px;
-    font-size: 18px;
-    display: inline-block;
+    padding: 0.75em 1.5em;
+	border: 0 none;
+	margin-bottom: 1.5em;
+	width: 100%;
 }
 
-input:focus,
-input:active {
-    outline: none;
+textarea {
+	min-height: 9em;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="tel"],
-input[type="number"],
-input[type="url"] {
-    border: none;
-    border-bottom: 2px solid #21a1e1;
-}
-
-input[type="submit"]:active {
-    color: white;
-    background: #21a1e1;
-}
-
-.input-group {
-    display: inline-block;
-    margin-right: 20px;
-    position: relative;
-}
+//input:focus,
+//input:active {
+//    outline: none;
+//}
+//
+//input[type="text"],
+//input[type="password"],
+//input[type="email"],
+//input[type="tel"],
+//input[type="number"],
+//input[type="url"] {
+//    border: none;
+//    border-bottom: 2px solid #21a1e1;
+//}
+//
+//input[type="submit"]:active {
+//    color: white;
+//    background: #21a1e1;
+//}
+//
+//.input-group {
+//    display: inline-block;
+//    margin-right: 20px;
+//    position: relative;
+//}

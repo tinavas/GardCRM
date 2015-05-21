@@ -3102,6 +3102,19 @@ label,
 /**
  * She’s all yours, cap’n... Begin importing your stuff here.
  */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "raleway";
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1; }
+
+.default {
+  font-family: "droid-serif";
+  font-style: normal;
+  color: pink;
+  font-weight: 400;
+  line-height: 1; }
+
 .wrap {
   width: 95%;
   max-width: 1024px;
@@ -3193,34 +3206,13 @@ section {
     background-color: #4a4a4a; }
 
 .awesome-form {
-  padding-top: 1%; }
+  padding-top: 4em; }
 
 input {
-  background: none;
-  border: solid 2px #21a1e1;
-  color: #21a1e1;
-  padding: 15px 40px;
-  font-size: 18px;
-  display: inline-block; }
+  padding: 0.75em 1.5em;
+  border: 0 none;
+  margin-bottom: 1.5em;
+  width: 100%; }
 
-input:focus,
-input:active {
-  outline: none; }
-
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="tel"],
-input[type="number"],
-input[type="url"] {
-  border: none;
-  border-bottom: 2px solid #21a1e1; }
-
-input[type="submit"]:active {
-  color: white;
-  background: #21a1e1; }
-
-.input-group {
-  display: inline-block;
-  margin-right: 20px;
-  position: relative; }
+textarea {
+  min-height: 9em; }
