@@ -1,3 +1,7 @@
+body {
+	background-color: $background;
+}
+
 .wrap {
 	width: 95%;
 	max-width: 1024px;
@@ -5,7 +9,9 @@
 	position: relative;
 }
 
-
+li {
+	list-style: none;
+}
 // Major page sections
 
 section {
@@ -29,4 +35,150 @@ section {
 
 .t--center {
 	text-align: center;
+}
+
+// Sidebar
+
+.page-content {
+	position: relative;
+	z-index: 0;
+	@include transition(all 0.5s ease);
+}
+
+.toggle {
+	@include position(fixed, 20px 0 0 20px);
+	height: 1.5em;
+	width: 1.5em;
+	@include transition(all 0.7s ease);
+	text-decoration: none;
+	font-size: 2em;
+	color: black;
+	z-index: 1;
+}
+
+.side-bar {
+	@include position(fixed, 0px 0px 0px -225px );
+	width: 225px;
+	padding: 30px;
+	@include transition(all 0.7s ease);
+	background: $grey;
+	z-index: 0;
+	
+	li {
+		margin-bottom: 1em;
+	}
+	
+	li a {
+		color: rgba(255,255,255,0.8);
+		font-family: $heading-font-family;
+		font-size: 1em;
+		cursor: pointer;
+		text-decoration: none;
+	}
+	
+	&:hover {
+		color: rgba(255,255,255,1);
+	}
+	
+	&:visited {
+		color: none;
+	}
+}
+
+#sidebartoggler {
+	display: none;
+	
+	&:checked + .page-wrap {
+	
+		.side-bar {
+			left: 0px;
+		}
+		.toggle {
+			left: 240px;
+		}
+		.page-content {
+			padding-left: 220px;
+			@include transition(all 0.7s ease);
+		}
+	}
+}
+
+.ic--home {
+	
+	&:before {
+		display: block;
+		position: absolute;
+		content: "";
+		height: 20px;
+		width: 20px;
+		background-repeat: no-repeat;
+		background-image: url(/assets/img/home.svg);
+		left: 45px;
+		top: 32px;
+	}
+}
+
+.ic--create {
+	
+	&:before {
+		display: block;
+		position: absolute;
+		content: "";
+		height: 20px;
+		width: 20px;
+		background-repeat: no-repeat;
+		background-image: url(/assets/img/create.svg);
+		left: 45px;
+		top: 72px;
+	}
+}
+
+.ic--search {
+	
+	&:before {
+		display: block;
+		position: absolute;
+		content: "";
+		height: 20px;
+		width: 20px;
+		background-repeat: no-repeat;
+		background-image: url(/assets/img/search.svg);
+		left: 45px;
+		top: 113px;
+	}
+}
+
+.ic--update {
+	
+	&:before {
+		display: block;
+		position: absolute;
+		content: "";
+		height: 20px;
+		width: 20px;
+		background-repeat: no-repeat;
+		background-image: url(/assets/img/update.svg);
+		left: 45px;
+		top: 150px;
+	}
+}
+
+.ic--logout {
+	
+	&:before {
+		display: block;
+		position: absolute;
+		content: "";
+		height: 24px;
+		width: 20px;
+		background-repeat: no-repeat;
+		background-image: url(/assets/img/logout.svg);
+		left: 45px;
+		top: 190px;
+	}
+}
+
+.logo {
+	width: 100%;
+	margin: 3em 0;
 }

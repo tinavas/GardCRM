@@ -11,5 +11,6 @@
 	border: solid 2px white;
 	&:hover {
 		background-color: $grey;
+		border: 2px solid $grey;
 	}
 }

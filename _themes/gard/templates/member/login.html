@@ -2,7 +2,7 @@
 	<div class="wrap">
 		<div class="grid">
 			<div class="grid__item">
-				<div class="awesome-form">
+				<div class="awesome-form  default">
 					{{ member:login_form return="member/dashboard" attr: class:login|id:login allow_request_return: true }}
 
 						{{ if error }}
@@ -10,8 +10,8 @@
 						{{ endif }}
 
 						<div class="input-group">
-							<input type="text" name="username" value="{{ old_values:username }}" id="username">
 							<label for="username">Your Username</label>
+							<input type="text" name="username" value="{{ old_values:username }}" id="username">
 
 							{{ if field_errors:username }}
 								<br>
@@ -21,8 +21,8 @@
 						</div>
 
 						<div class="input-group">
-							<input type="password" name="password" value="" id="password">
 							<label for="password">Your Password</label>
+							<input type="password" name="password" value="" id="password">
 
 							{{ if field_errors:password }}
 								<br>
@@ -32,7 +32,7 @@
 						</div>
 
 						<div class="input-group">
-							<input type="submit" value="Log in">
+							<input type="submit" value="Log in" class="btn--green">
 						</div>
 
 					{{ /member:login_form }}
