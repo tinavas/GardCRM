@@ -34,6 +34,7 @@ allowed:
   - country
   - notes
   - where
+  - logo
 
 # You are not required to require fields, but once you do, any missing
 # from the POST will squash this submission and send a list of
@@ -45,6 +46,7 @@ required:
   - company_name
   - postcode
   - city
+  - logo
 
 submission_save_extension: md
 
@@ -96,3 +98,5 @@ control_panel:
       type: sum
       field: years
       label: Total Years Stranded
+
+upload_destination: /assets/

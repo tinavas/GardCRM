@@ -6,7 +6,8 @@
             {{ theme:partial src="forms/_form_error_raven" }}
             {{ theme:partial src="forms/_form_success_raven" }}
 
-                {{ raven:form formset="customer" }}
+
+                {{ raven:form formset="customer" files="true" }}
                 <div class="">
                     <input type="hidden" name="member" value="{{ current_member:_uid }}" />
                 </div>
@@ -15,6 +16,9 @@
                     <input type="text" name="title" value="{{ old_values:title }}" id="title">
                     <label for="title">Title</label>
                 </div>
+                
+                <label for="logo">Upload logo if applicable:</label>
+                <input type="file" name="logo" />
 
                 <div class="">
                     <input type="text" name="contact_name" value="{{ old_values:contact_name }}" id="contact_name">
@@ -105,6 +109,8 @@
                     <input type="text" name="country" value="{{ old_values:country }}" id="country"> <!-- will need to be select at some point -->
                     <label for="country">Country</label>
                 </div>
+                
+                <input type="filepicker" data-fp-apikey="AwUBgNTPVRQO4ny8UAE4lz" onchange="alert(event.fpfile.url)">
 
                 <div class="">
                     <input type="textarea" name="notes" value="{{ old_values:notes }}" id="notes">

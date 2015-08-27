@@ -90,7 +90,7 @@ class Plugin_transform extends Plugin
         $pos_x  = $this->fetchParam('pos_x', 0, 'is_numeric');
         $pos_y  = $this->fetchParam('pos_y', 0, 'is_numeric');
 
-        $quality = $this->fetchParam('quality', '75', 'is_numeric');
+        $quality = $this->fetchParam('quality', Config::get('transform_quality'), 'is_numeric');
 
 
         /*
@@ -187,7 +187,7 @@ class Plugin_transform extends Plugin
             // Method checks to see if folder exists before creating it
             Folder::make($destination);
 
-            $stripped_image_path = Path::tidy($destination . '/' . basename($stripped_image_path));
+            $stripped_image_path = Path::tidy($destination . '/' . urlencode(basename($stripped_image_path)));
         }
 
         // Reassembled filename with all flags filtered and delimited
@@ -284,15 +284,22 @@ class Plugin_transform extends Plugin
 
         // Positioning options via ordered pipe settings:
         // source|position|x offset|y offset
+
         if ($watermark) {
-            $watermark_options = Helper::explodeOptions($watermark);
 
-            $source = Path::tidy(BASE_PATH . '/' . array_get($watermark_options, 0, null));
-            $anchor = array_get($watermark_options, 1, null);
-            $pos_x  = array_get($watermark_options, 2, 0);
-            $pos_y  = array_get($watermark_options, 3, 0);
+            // Why not support more than one watermark?
+            $watermarks = explode(',', $watermark);
 
-            $image->insert($source, $pos_x, $pos_y, $anchor);
+            foreach ($watermarks as $watermark) {
+                $watermark_options = Helper::explodeOptions($watermark);
+                
+                $source = Path::tidy(BASE_PATH . '/' . array_get($watermark_options, 0, null));
+                $anchor = array_get($watermark_options, 1, null);
+                $pos_x  = array_get($watermark_options, 2, 0);
+                $pos_y  = array_get($watermark_options, 3, 0);
+
+                $image->insert($source, $pos_x, $pos_y, $anchor);
+            }
         }
 
 
