@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.section {
+	padding: 3em 0;
+}
+@include media-query(lap-and-up) {
+	.section {
+		padding: 4.5em 0;
+	}	
+}
+@include media-query(desk) {
+	.section {
+		padding: 6em 0;
+	}	
+}
+
+@include media-query(desk-wide) {
+	.section {
+		padding: 7.5em 0;
+	}	
+}
+
+.section-yellow {
+	@include grad-double($yellow-light, $yellow-dark);
+}
+
+.section-blue {
+	@include grad-double($blue-light, $blue-dark);
+}
+
+.section--sprout-gold {
+	@include grad-double($sprout, $gold);
+}
+
+.section--sprout {
+	background-color: $sprout;
+}
+
+.section-gold {
+	@include grad-double($golden-yellow, $gold);
+}

@@ -27,7 +27,7 @@ _site_name: Gard CRM
 _content_root: _content
 
 # Used for permalinks
-_site_url: http://statamic.com
+_site_url: http://gard.dev
 
 # Folder name of your desired theme
 _theme: gard
@@ -42,7 +42,7 @@ _date_format: 'F jS, Y'
 _time_format: 'g:ia'
 
 # Timezone
-_timezone: America/New_York
+_timezone: Europe/London
 
 # List of desired taxonomy triggers
 _taxonomy:

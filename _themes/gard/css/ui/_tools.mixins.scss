@@ -1,0 +1,67 @@
+@charset "UTF-8";
+// Simple transition for text colour and background colour. Mostly used on buttons.
+
+@mixin color-transition {
+	-webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out; 
+	-moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out; 
+	-o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out; 
+	-ms-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out; 
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+// Basic button creation. Pass the mixin and colour variable and tada!
+
+@mixin btn($btn-color) {
+	display: inline-block;
+	background-color: $btn-color;
+	color: white;
+	border: 1px solid #009688;
+	font-size: 17px;
+	padding: 7px 12px;
+	font-weight: normal;
+	margin: 6px 0;
+	margin-right: 12px;
+	display: inline-block;
+	text-decoration: none;
+	min-width: 120px;
+	@include color-transition; 
+	&:hover {
+		cursor: pointer;
+		background-color: mix(black, $btn-color, 15%);
+		@include color-transition;
+	}
+}
+
+// Turns visuallyhidden class into a mixin to use in breakpoints.
+
+@mixin visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+// Simple prefixer.
+
+@mixin prefixed($property, $value) {
+    -webkit-#{$property}: $value;
+       -moz-#{$property}: $value;
+        -ms-#{$property}: $value;
+         -o-#{$property}: $value;
+            #{$property}: $value;
+}
+
+@mixin grad-double($color1, $color2) {
+	background-color: $color1; /* Fallback Color */
+	background-image: -webkit-gradient(linear, left, from($color1) 25%, to($color2) 100%); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(left, $color1 25%, $color2 100%); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(left, $color1 25%, $color2 100%); /* FF3.6 */
+	background-image:     -ms-linear-gradient(left, $color1 25%, $color2 100%); /* IE10 */
+	background-image:      -o-linear-gradient(left, $color1 25%, $color2 100%); /* Opera 11.10+ */
+	background-image:         linear-gradient(left, $color1 25%, $color2 100%);
+}
+

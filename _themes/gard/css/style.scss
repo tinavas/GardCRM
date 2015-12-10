@@ -1,36 +1,135 @@
 @charset "UTF-8";
-/*------------------------------------*\
-    STYLE.CSS
-\*------------------------------------*/
-/**
- *
- * sass --watch style.scss:style.min.css --style compressed
- *
- * Here we pull in some variables, include the inuit.css framework, then add our
- * project-specific components afterwards.
- */
 
+// Settings
 
-/**
- * Setup
- */
-@import "grid-fix";
-@import "vars";
-@import "inuit.css/inuit";
+@import "bower_components/inuit-defaults/settings.defaults";
+
+$breakpoints: (
+   "palm"              		"screen and (max-width: 24.9375em)",
+   "phablet"           		"screen and (min-width: 25em) and (max-width: 44.9375em)",
+   "phablet-and-up"    		"screen and (min-width: 25em)",
+   "mobile"            		"screen and (max-width: 44.9375em)",
+   "tablet-port"       		"screen and (min-width: 45em) and (max-width: 59.9375em)",
+   "tablet-port-and-up"     "screen and (min-width: 45em)",
+   "tablet-land"       		"screen and (min-width: 60em) and (max-width: 71.9375em)",
+   "tablet-land-and-up"     "screen and (min-width: 60em)",
+   "lap"               		"screen and (min-width: 72em) and (max-width: 89.9375em)",
+   "lap-and-up"        		"screen and (min-width: 72em)",
+   "portable"          		"screen and (max-width: 71.9375em)",
+   "desk"              		"screen and (min-width: 90em)",
+   "desk-wide"         		"screen and (min-width: 120em)",
+   "retina"            		"(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)"
+);
+
+@import "bower_components/inuit-responsive-settings/settings.responsive";
 @import "bourbon/bourbon";
 
+@import "ui/settings.global";
+@import "ui/settings.color";
+
+// Tools
+
+@import "bower_components/inuit-functions/tools.functions";
+@import "bower_components/inuit-mixins/tools.mixins";
+@import "bower_components/inuit-responsive-tools/tools.responsive";
+@import "bower_components/inuit-tools-widths/tools.widths";
+
+@import "ui/tools.gridfix";
+@import "ui/tools.mixins";
+
+//Generic
+
+@import "bower_components/inuit-normalize/generic.normalize";
+@import "bower_components/inuit-reset/generic.reset";
+@import "bower_components/inuit-box-sizing/generic.box-sizing";
+@import "bower_components/inuit-shared/generic.shared";
+
+// Base
+
+@import "bower_components/inuit-page/base.page";
+@import "bower_components/inuit-headings/base.headings";
+@import "bower_components/inuit-lists/base.lists";
+@import "bower_components/inuit-images/base.images";
+@import "ui/base.typography";
+@import "ui/base.buttons";
+@import "ui/base.sections";
+
+// Objects
+
+@import "bower_components/inuit-buttons/objects.buttons";
+
+$inuit-enable-layout--rev:      true;
+$inuit-enable-layout--center:   true;
+$inuit-enable-layout--right:   	true;
+
+@import "bower_components/inuit-layout/objects.layout";
+@import "bower_components/inuit-media/objects.media";
+@import "bower_components/inuit-list-bare/objects.list-bare";
+
+// Components
+
+@import "ui/components.global";
+@import "ui/components.head";
+@import "ui/components.foot";
+@import "ui/components.hero";
+@import "ui/base.forms";
 
 
 
-/**
- * She’s all yours, cap’n... Begin importing your stuff here.
- */
-//@import "ui/example";
+// Trumps
+
+@import "bower_components/inuit-clearfix/trumps.clearfix";
+@import "bower_components/inuit-widths/trumps.widths";
+@import "bower_components/inuit-widths-responsive/trumps.widths-responsive";
+
+$inuit-enable-margins:                  true;
+$inuit-enable-margins--tiny:            true;
+$inuit-enable-margins--small:           true;
+$inuit-enable-margins--large:           true;
+$inuit-enable-margins--huge:            true;
+
+$inuit-enable-margins--negative:        true;
+$inuit-enable-margins--negative-tiny:   true;
+$inuit-enable-margins--negative-small:  true;
+$inuit-enable-margins--negative-large:  true;
+$inuit-enable-margins--negative-huge:   true;
+
+$inuit-enable-margins--none:            true;
+
+$inuit-enable-paddings:                 true;
+$inuit-enable-paddings--tiny:           true;
+$inuit-enable-paddings--small:          true;
+$inuit-enable-paddings--large:          true;
+$inuit-enable-paddings--huge:           true;
+
+$inuit-enable-paddings--none:           true;
+
+@import "bower_components/inuit-spacing/trumps.spacing";
+
+$inuit-enable-responsive-margins:                   true;
+$inuit-enable-responsive-margins--tiny:             true;
+$inuit-enable-responsive-margins--small:            true;
+$inuit-enable-responsive-margins--large:            true;
+$inuit-enable-responsive-margins--huge:             true;
+
+$inuit-enable-responsive-margins--negative:         true;
+$inuit-enable-responsive-margins--negative-tiny:    true;
+$inuit-enable-responsive-margins--negative-small:   true;
+$inuit-enable-responsive-margins--negative-large:   true;
+$inuit-enable-responsive-margins--negative-huge:    true;
+
+$inuit-enable-responsive-margins--none:             true;
+
+$inuit-enable-responsive-paddings:                  true;
+$inuit-enable-responsive-paddings--tiny:            true;
+$inuit-enable-responsive-paddings--small:           true;
+$inuit-enable-responsive-paddings--large:           true;
+$inuit-enable-responsive-paddings--huge:            true;
+
+$inuit-enable-responsive-paddings--none:            true;
+
+@import "bower_components/inuit-spacing-responsive/trumps.spacing-responsive";
 
 
-@import "ui/mixins";
-@import "ui/typography";
-@import "ui/global";
-@import "ui/buttons";
-@import "ui/forms";
-@import "ui/footer";
+
+

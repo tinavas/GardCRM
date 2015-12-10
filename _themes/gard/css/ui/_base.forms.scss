@@ -1,0 +1,179 @@
+/********************
+	
+	General styles
+	
+********************/
+
+input, 
+textarea {
+	padding: 1em 1.125em;
+	margin-bottom: 1em;
+	width: 100%;
+	line-height: 1;
+	&:focus {
+		border-color: $maroon;
+		outline: 0;
+		-webkit-appearence: none;
+	}
+}
+@include media-query(desk) {
+	input {
+		display: inline-block;
+	}
+}
+
+textarea {
+	@extend input;
+	height: auto;
+	min-height: 15em;
+	overflow: hidden;
+}
+
+// Custom select styles
+
+select {
+	line-height: 1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -moz-outline: none;
+    padding: 1em 1.125em 1.1875em;
+    border-radius: 0;
+    position: relative;
+	margin-bottom: 1em;
+    width: 100%;
+	outline: 0;
+	border: 1px solid white;
+    &:focus {
+		border-color: $maroon;
+	}
+}
+
+.select:-moz-focusring {
+   color: transparent;
+   text-shadow: 0 0 0 #000;
+}
+
+// End
+
+// Custom Checkbox Styles
+
+input[type="checkbox"] + label span,
+input[type="radio"] + label span {
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-top: -5px;
+    width: 32px;
+    height: 32px;
+    @include prefixed(border-radius,0.25em);
+    margin-right: 0.75em;
+	margin: 0.5em 1em 1em 0;
+}
+
+input[type="checkbox"]:focus + label span,
+input[type="radio"]:focus + label span {
+	border-color: $gold;
+}
+
+input[type="checkbox"]:checked + label span,
+input[type="radio"]:checked + label span {
+    background: url(/assets/img/check.svg) no-repeat center center;
+    background-size: 1em;
+}
+
+.checkbox-contact {
+	@include visuallyhidden;
+}
+
+// End
+
+/********************
+	
+	Form Dark
+	
+********************/
+
+/*
+.form-dark {
+	@include placeholder($placeholder-light);
+	input, select {
+		background-color: $form-dark;
+		color: white;
+		border: 1px solid $border;
+			&:focus {
+			border-color: $turquoise;
+			outline: 0;
+			-webkit-appearence: none;
+		}
+	}
+	input[type="checkbox"] + label span {
+	    border: solid 1px $border;
+	    background-color: $form-dark;
+	}
+}
+
+.select-dark {
+	color: $placeholder-light;
+	background: url(/assets/img/) no-repeat right center;
+}
+*/
+
+
+
+/********************
+	
+	Form Light
+	
+********************/
+
+/*
+.form-light {
+	@include placeholder($placeholder-light);
+	input, select {
+		background-color: $form-light;
+		color: $dark-grey;
+		border: 1px solid $border-dark;
+			&:focus {
+			border: 1px solid;
+			border-color: $turquoise;
+			outline: 0;
+			-webkit-appearence: none;
+		}
+	}
+	input[type="checkbox"] + label span,
+	input[type="radio"] + label span {
+	    border: solid 1px $border-dark;
+	    background-color: $form-light;
+	}
+}
+
+
+
+.checkout-title {
+	position: absolute;
+	top: -3em;
+	left: 0;
+	padding: 0.75em 2em;
+	font-size: 0.875em;
+	&--is-lime {
+		background-color: $lime;
+	}
+	&--is-green {
+		background-color: $green;
+	}
+	&--is-turquoise {
+		background-color: $turquoise;
+	}
+	&--is-blue {
+		background-color: $blue;
+	}
+	&--is-purple {
+		background-color: $purple;
+	}
+	p {
+		margin: 0;
+		color: white;
+	}
+}
+*/

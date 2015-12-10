@@ -1,0 +1,374 @@
+@charset "UTF-8";
+// Base type rules: fonts, weights, links, quotes etc.
+
+$base-font-size:    				16px;
+$base-line-height:  				24px;
+$base-font-family: 					'Varela Round', sans-serif;
+$base-font-color:					white;
+$heading-font-family: 				"bebas-neue",sans-serif;
+$display-font-family: 				'Montserrat', sans-serif;
+
+// Responsive headings
+
+.giga,.mega,.kilo,h1,.alpha,h2,.beta,h3,.gamma,h4,.delta,h5,.epsilon,h6,.zeta {
+	font-family: $heading-font-family;
+	font-weight: 700;
+	line-height: $base-line-height;
+	color: $dark-grey;
+}
+
+html {
+	color: $base-font-color;
+	line-height: $base-line-height;
+}
+
+/* .giga */
+
+$giga:								72px;
+$giga-phablet:						$giga * 1.125;
+$giga-tablet-port:					$giga * 1.25;
+$giga-tablet-land:					$giga * 1.5;
+$giga-lap:							$giga * 1.75;
+$giga-desk:							$giga * 2;
+
+/* .mega */
+
+$mega:								60px;
+$mega-phablet:						$mega * 1.125;
+$mega-tablet-port:					$mega * 1.25;
+$mega-tablet-land:					$mega * 1.5;
+$mega-lap:							$mega * 1.75;
+$mega-desk:							$mega * 2;
+
+/* .kilo */
+
+$kilo:								48px;
+$kilo-phablet:						$kilo * 1.125;
+$kilo-tablet-port:					$kilo * 1.25;
+$kilo-tablet-land:					$kilo * 1.5;
+$kilo-lap:							$kilo * 1.75;
+$kilo-desk:							$kilo * 2;
+
+/* small,.milli */
+
+$milli:								12px;
+$milli-phablet:						$milli * 0.125;
+$milli-tablet-port:					$milli * 0.25;
+$milli-tablet-land:					$milli * 0.5;
+$milli-lap:							$milli * 0.75;
+$milli-desk:						$milli * 1;
+
+/* h1,.alpha */
+$inuit-heading-size-1:  			36px;
+$inuit-heading-size-1-phablet:		$inuit-heading-size-1 * 1.125;
+$inuit-heading-size-1-tablet-port:	$inuit-heading-size-1 * 1.25;
+$inuit-heading-size-1-tablet-land:	$inuit-heading-size-1 * 1.5;
+$inuit-heading-size-1-lap:			$inuit-heading-size-1 * 1.75;
+$inuit-heading-size-1-desk:			$inuit-heading-size-1 * 2;
+
+/* h2,.beta */
+$inuit-heading-size-2:  			30px;
+$inuit-heading-size-2-phablet:		$inuit-heading-size-2 * 1.125;
+$inuit-heading-size-2-tablet-port:	$inuit-heading-size-2 * 1.25;
+$inuit-heading-size-2-tablet-land:	$inuit-heading-size-2 * 1.5;
+$inuit-heading-size-2-lap:			$inuit-heading-size-2 * 1.75;
+$inuit-heading-size-2-desk:			$inuit-heading-size-2 * 2;
+
+/* h3,.gamma */
+$inuit-heading-size-3:  			24px;
+$inuit-heading-size-3-phablet:		$inuit-heading-size-3 * 1.125;
+$inuit-heading-size-3-tablet-port:	$inuit-heading-size-3 * 1.25;
+$inuit-heading-size-3-tablet-land:	$inuit-heading-size-3 * 1.5;
+$inuit-heading-size-3-lap:			$inuit-heading-size-3 * 1.75;
+$inuit-heading-size-3-desk:			$inuit-heading-size-3 * 2;
+
+/* h4,.delta */
+$inuit-heading-size-4:  			20px;
+$inuit-heading-size-4-phablet:		$inuit-heading-size-4 * 1.125;
+$inuit-heading-size-4-tablet-port:	$inuit-heading-size-4 * 1.25;
+$inuit-heading-size-4-tablet-land:	$inuit-heading-size-4 * 1.5;
+$inuit-heading-size-4-lap:			$inuit-heading-size-4 * 1.75;
+$inuit-heading-size-4-desk:			$inuit-heading-size-4 * 2;
+
+/* h5,.epsilon */
+$inuit-heading-size-5:  			16px;
+$inuit-heading-size-5-phablet:		$inuit-heading-size-5 * 1.125;
+$inuit-heading-size-5-tablet-port:	$inuit-heading-size-5 * 1.25;
+$inuit-heading-size-5-tablet-land:	$inuit-heading-size-5 * 1.5;
+$inuit-heading-size-5-lap:			$inuit-heading-size-5 * 1.75;
+$inuit-heading-size-5-desk:			$inuit-heading-size-5 * 2;
+
+/* h6,.zeta */
+$inuit-heading-size-6:  			14px;
+$inuit-heading-size-6-phablet:		$inuit-heading-size-6 * 1.125;
+$inuit-heading-size-6-tablet-port:	$inuit-heading-size-6 * 1.25;
+$inuit-heading-size-6-tablet-land:	$inuit-heading-size-6 * 1.5;
+$inuit-heading-size-6-lap:			$inuit-heading-size-6 * 1.75;
+$inuit-heading-size-6-desk:			$inuit-heading-size-6 * 2;
+
+.giga {
+	@include inuit-font-size($giga);
+	
+	@include media-query(phablet) {
+        @include inuit-font-size($giga-phablet);
+    }
+	
+	@include media-query(tablet-port) {
+        @include inuit-font-size($giga-tablet-port);
+    }
+	
+	@include media-query(tablet-land) {
+        @include inuit-font-size($giga-tablet-land);
+    }
+	
+	@include media-query(lap) {
+        @include inuit-font-size($giga-lap);
+    }
+	
+	@include media-query(desk) {
+        @include inuit-font-size($giga-desk);
+    }
+}
+
+.mega {
+	@include inuit-font-size($mega);
+	
+	@include media-query(phablet) {
+        @include inuit-font-size($mega-phablet);
+    }
+	
+	@include media-query(tablet-port) {
+        @include inuit-font-size($mega-tablet-port);
+    }
+	
+	@include media-query(tablet-land) {
+        @include inuit-font-size($mega-tablet-land);
+    }
+	
+	@include media-query(lap) {
+        @include inuit-font-size($mega-lap);
+    }
+	
+	@include media-query(desk) {
+        @include inuit-font-size($mega-desk);
+    }
+}
+
+.kilo {
+	@include inuit-font-size($kilo);
+	
+	@include media-query(phablet) {
+        @include inuit-font-size($kilo-phablet);
+    }
+	
+	@include media-query(tablet-port) {
+        @include inuit-font-size($kilo-tablet-port);
+    }
+	
+	@include media-query(tablet-land) {
+        @include inuit-font-size($kilo-tablet-land);
+    }
+	
+	@include media-query(lap) {
+        @include inuit-font-size($kilo-lap);
+    }
+	
+	@include media-query(desk) {
+        @include inuit-font-size($kilo-desk);
+    }
+}
+
+
+h1,.alpha {
+    @include inuit-font-size($inuit-heading-size-1);
+	
+	@include media-query(phablet) {
+        @include inuit-font-size($inuit-heading-size-1-phablet);
+    }
+	
+	@include media-query(tablet-port) {
+        @include inuit-font-size($inuit-heading-size-1-tablet-port);
+    }
+	
+	@include media-query(tablet-land) {
+        @include inuit-font-size($inuit-heading-size-1-tablet-land);
+    }
+	
+	@include media-query(lap) {
+        @include inuit-font-size($inuit-heading-size-1-lap);
+    }
+	
+	@include media-query(desk) {
+        @include inuit-font-size($inuit-heading-size-1-desk);
+    }
+}
+
+h2,.beta {
+    @include inuit-font-size($inuit-heading-size-2);
+	
+	@include media-query(phablet) {
+        @include inuit-font-size($inuit-heading-size-2-phablet);
+    }
+	
+	@include media-query(tablet-port) {
+        @include inuit-font-size($inuit-heading-size-2-tablet-port);
+    }
+	
+	@include media-query(tablet-land) {
+        @include inuit-font-size($inuit-heading-size-2-tablet-land);
+    }
+	
+	@include media-query(lap) {
+        @include inuit-font-size($inuit-heading-size-2-lap);
+    }
+	
+	@include media-query(desk) {
+        @include inuit-font-size($inuit-heading-size-2-desk);
+    }
+}
+
+h3,.gamma {
+   @include inuit-font-size($inuit-heading-size-3);
+	
+	@include media-query(phablet) {
+        @include inuit-font-size($inuit-heading-size-3-phablet);
+    }
+	
+	@include media-query(tablet-port) {
+        @include inuit-font-size($inuit-heading-size-3-tablet-port);
+    }
+	
+	@include media-query(tablet-land) {
+        @include inuit-font-size($inuit-heading-size-3-tablet-land);
+    }
+	
+	@include media-query(lap) {
+        @include inuit-font-size($inuit-heading-size-3-lap);
+    }
+	
+	@include media-query(desk) {
+        @include inuit-font-size($inuit-heading-size-3-desk);
+    }
+}
+
+h4,.delta {
+    @include inuit-font-size($inuit-heading-size-4);
+	
+	@include media-query(phablet) {
+        @include inuit-font-size($inuit-heading-size-4-phablet);
+    }
+	
+	@include media-query(tablet-port) {
+        @include inuit-font-size($inuit-heading-size-4-tablet-port);
+    }
+	
+	@include media-query(tablet-land) {
+        @include inuit-font-size($inuit-heading-size-4-tablet-land);
+    }
+	
+	@include media-query(lap) {
+        @include inuit-font-size($inuit-heading-size-4-lap);
+    }
+	
+	@include media-query(desk) {
+        @include inuit-font-size($inuit-heading-size-4-desk);
+    }
+}
+
+h5,.epsilon {
+    @include inuit-font-size($inuit-heading-size-5);
+	
+	@include media-query(phablet) {
+        @include inuit-font-size($inuit-heading-size-5-phablet);
+    }
+	
+	@include media-query(tablet-port) {
+        @include inuit-font-size($inuit-heading-size-5-tablet-port);
+    }
+	
+	@include media-query(tablet-land) {
+        @include inuit-font-size($inuit-heading-size-5-tablet-land);
+    }
+	
+	@include media-query(lap) {
+        @include inuit-font-size($inuit-heading-size-5-lap);
+    }
+	
+	@include media-query(desk) {
+        @include inuit-font-size($inuit-heading-size-5-desk);
+    }
+}
+
+h6,.zeta {
+    @include inuit-font-size($inuit-heading-size-6);
+	
+	@include media-query(phablet) {
+        @include inuit-font-size($inuit-heading-size-6-phablet);
+    }
+	
+	@include media-query(tablet-port) {
+        @include inuit-font-size($inuit-heading-size-6-tablet-port);
+    }
+	
+	@include media-query(tablet-land) {
+        @include inuit-font-size($inuit-heading-size-6-tablet-land);
+    }
+	
+	@include media-query(lap) {
+        @include inuit-font-size($inuit-heading-size-6-lap);
+    }
+	
+	@include media-query(desk) {
+        @include inuit-font-size($inuit-heading-size-6-desk);
+    }
+}
+
+small,.milli {
+	@include inuit-font-size($milli);
+	
+	@include media-query(phablet) {
+        @include inuit-font-size($milli-phablet);
+    }
+	
+	@include media-query(tablet-port) {
+        @include inuit-font-size($milli-tablet-port);
+    }
+	
+	@include media-query(tablet-land) {
+        @include inuit-font-size($milli-tablet-land);
+    }
+	
+	@include media-query(lap) {
+        @include inuit-font-size($milli-lap);
+    }
+	
+	@include media-query(desk) {
+        @include inuit-font-size($milli-desk);
+    }
+    color: green;
+}
+
+// Basic font styles
+
+datetime {
+	font-size: 0.75em;
+	color: grey;
+}
+
+a {
+	color: green;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.mono {
+	color: white;
+}
+
+.display {
+	color: white;
+	text-transform: uppercase;
+	font-family: $display-font-family;
+}

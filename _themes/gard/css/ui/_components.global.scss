@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+body {
+	background-color: $background;
+	-webkit-font-smoothing: antialiased;
+	&.active {
+		overflow-y: hidden;
+		height: 100vh;
+	}
+}
+
+// Positioning
+
+.t--left {
+	text-align: left;
+}
+
+.t--right {
+	text-align: right;
+}
+
+.t--center {
+	text-align: center;
+}
+
+// Wraps
+
+.wrap {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 10%;
+}
+
+@include media-query(lap-and-up) {
+	.wrap {
+		max-width: 56.8em;
+		padding: 0 1.5em;
+	}
+}
+
+@include media-query(desk) {
+	.wrap {
+		max-width: 64em;
+	}
+}

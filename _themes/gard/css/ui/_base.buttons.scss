@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+// Custom button definition. Calling button mixin.
+
+
+.btn--grey {
+	@include btn($light-grey);
+	border: 2px solid $light-grey;
+}
+
+.btn--gold {
+	@include btn($gold);
+}
+
+.btn--maroon {
+	@include btn($maroon);
+}
+/*
+.btn--yellow {
+	@include btn($yellow);
+}
+
+.btn--grey {
+	@include btn($grey);
+}
+
+.btn--pink {
+	@include btn($pink);
+}
+
+.btn--green {
+	@include btn($green);
+}
+*/
+
+.btn--transparent {
+	@include btn(transparent);
+	border: 2px solid white;
+	color: white;
+}
+
+$button-height:		27px;
+$button-width:		35px;

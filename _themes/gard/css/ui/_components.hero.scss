@@ -1,0 +1,31 @@
+.hero {
+	text-align: center;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 4em 0;
+}
+
+@include media-query(tablet-port-and-up) {
+	.hero {
+		padding: 4.5em 0;
+	}
+}
+
+@include media-query(tablet-land-and-up) {
+	.hero {
+		padding: 6em 0;
+	}
+}
+
+@include media-query(lap-and-up) {
+	.hero {
+		padding: 9em;
+	}
+}
+
+@include media-query(desk) {
+	.hero {
+		padding: 10.5em;
+	}
+}

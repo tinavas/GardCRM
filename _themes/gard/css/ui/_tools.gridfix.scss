@@ -1,0 +1,15 @@
+@charset "UTF-8";
+.layout {
+  letter-spacing: -0.31em;
+}
+
+/* Opera hack */
+.opera:-o-prefocus,
+.layout {
+  word-spacing: -0.43em;
+}
+
+.layout__item {
+  letter-spacing: normal;
+  word-spacing: normal;
+}
