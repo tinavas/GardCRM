@@ -33,13 +33,13 @@ body {
 
 @include media-query(lap-and-up) {
 	.wrap {
-		max-width: 56.8em;
+		max-width: 64.8em;
 		padding: 0 1.5em;
 	}
 }
 
 @include media-query(desk) {
 	.wrap {
-		max-width: 64em;
+		max-width: 72em;
 	}
 }

@@ -1,16 +1,57 @@
-
-
 {{ if logged_in }}
-    <h1>Hello {{ username }}</h1>
-    <h4>Welcome to Gard CRM</h4>
-
-    <p>What would you like to do today?</p>
-
-<a href="/member/customer-form">Create Contact</a>
-<br>
-<a href="/member/search">Search Contact</a>
-<br>
-<a href="/member/update-profile">Update Profile</a>
-<br>
-<a href="{{ member:logout_url  return="/" }}" class="button">Log Out</a>
-{{ endif }}
+	<section class="section" style="background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('/assets/img/shutterstock_49561189.jpg'); background-size: cover;">
+		<div class="wrap">
+			<div class="layout">
+				<div class="layout__item">
+					<div class="member-header">
+						{{ member:profile }}
+							<img class="member-img" src="{{ file_upload }}" class="agent-img" alt="mug shot">
+							<h1 class="member-heading  epsilon">Welcome back {{ username|ucfirst }}</h1>
+							<time class="member-date" datetime="{{ current_date format="l d F Y" }}">{{ current_date format="l d F Y" }}</time>
+						{{ /member:profile }}
+					</div>
+				</div>
+			</div>
+			<div class="layout">
+				<div class="layout__item  u-1/2-tablet-port-and-up">
+					<div class="box--background">
+						<a class="content  content--contact" href="/member/customer-form">
+							<h3 class="dash-block__heading">Create Contact</h3>
+							<p>Keep 'em comming</p>
+						</a>
+					</div>
+				</div>
+				<div class="layout__item  u-1/2-tablet-port-and-up">
+					<div class="box--background">
+						<a class="content  content--search" href="/member/search">
+							<h3 class="dash-block__heading">Search Contact</h3>
+							<p>Find clients and edit their info</p>
+						</a>
+					</div>
+				</div>
+				<div class="layout__item  u-1/2-tablet-port-and-up">
+					<div class="box--background">
+						<a class="content  content--update" href="/member/update-profile">
+							<h3 class="dash-block__heading">Update Profile</h3>
+							<p>Got a fancy new name or email? Show it off here.</p>
+						</a>
+					</div>
+				</div>
+				<div class="layout__item  u-1/2-tablet-port-and-up">
+					<div class="box--background">
+						<a class="content  content--log-out" href="{{ member:logout_url  return="/" }}">
+							<h3 class="dash-block__heading">Log Out</h3>
+							<p>Return to the home page</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	{{ elseif !logged_in }}
+	
+	<h1>Sorry you are not logged in</h1>
+	<a href="/member/login" class="btn--transparent">Log in</a>
+	<a href="/member/register" class="btn--transparent">Sign up</a>
+{{ /if }}

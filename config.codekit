@@ -12213,6 +12213,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/_themes\/gard\/css\/ui\/_components.dash.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_themes\/gard\/css\/ui\/_components.dash.scss",
+		"outputAbbreviatedPath": "\/_themes\/gard\/css\/css\/_components.dash.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/_themes\/gard\/css\/ui\/_components.foot.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -12371,15 +12387,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_themes\/gard\/partials\/footer.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/_themes\/gard\/partials\/forms\/_customer_input_form.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_themes\/gard\/partials\/forms\/_customer_input_form.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -13377,6 +13384,72 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/assets\/img\/contact.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11266,
+		"inputAbbreviatedPath": "\/assets\/img\/contact.png",
+		"outputAbbreviatedPath": "\/assets\/img\/contact.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/log-out.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9667,
+		"inputAbbreviatedPath": "\/assets\/img\/log-out.png",
+		"outputAbbreviatedPath": "\/assets\/img\/log-out.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/mugshot.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 53811,
+		"inputAbbreviatedPath": "\/assets\/img\/mugshot.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/mugshot.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/search.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10852,
+		"inputAbbreviatedPath": "\/assets\/img\/search.png",
+		"outputAbbreviatedPath": "\/assets\/img\/search.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/shutterstock_49561189.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.25066e+07,
+		"inputAbbreviatedPath": "\/assets\/img\/shutterstock_49561189.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/shutterstock_49561189.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/update.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11667,
+		"inputAbbreviatedPath": "\/assets\/img\/update.png",
+		"outputAbbreviatedPath": "\/assets\/img\/update.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/index.php": {
 		"fileType": 8192,

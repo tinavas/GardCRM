@@ -35,6 +35,16 @@
       <small class="error">{{ field_errors:email }}</small>
     {{ endif }}
   </p>
+  
+  <p>
+	<input type="file" name="file_upload" value="{{ old_values:file_upload }}" id="file-upload">
+    <label for="file_upload">Photo</label>
+    
+    {{ if field_errors:fle_upload }}
+        <br>
+        <small class="error">{{ field_errors:file_upload }}</small>
+    {{ endif }}
+  </p>
 
   <p>
     <input type="submit" name="Submit" value="Update Profile">

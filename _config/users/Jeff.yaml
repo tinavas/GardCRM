@@ -1,0 +1,9 @@
+---
+email: jeff@jeff.com
+password: ""
+password_hash: $2a$08$M7mIaLjGJwQ7zh39VmkiruJggC1c.u.AgNwSxDIeMCgEKxKQnyJtS
+file_upload: /assets/img/mugshot.jpg
+_uid: nKgNt4566c4081a085a6cwGvFvl
+roles:
+  - admin
+---

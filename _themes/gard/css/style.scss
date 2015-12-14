@@ -37,6 +37,16 @@ $breakpoints: (
 @import "ui/tools.gridfix";
 @import "ui/tools.mixins";
 
+$inuit-widths-columns-responsive: (
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   12,
+);
+
 //Generic
 
 @import "bower_components/inuit-normalize/generic.normalize";
@@ -53,6 +63,7 @@ $breakpoints: (
 @import "ui/base.typography";
 @import "ui/base.buttons";
 @import "ui/base.sections";
+@import "ui/base.forms";
 
 // Objects
 
@@ -61,6 +72,8 @@ $breakpoints: (
 $inuit-enable-layout--rev:      true;
 $inuit-enable-layout--center:   true;
 $inuit-enable-layout--right:   	true;
+$inuit-enable-media--small:     true;
+$inuit-enable-media--responsive:true;
 
 @import "bower_components/inuit-layout/objects.layout";
 @import "bower_components/inuit-media/objects.media";
@@ -72,8 +85,7 @@ $inuit-enable-layout--right:   	true;
 @import "ui/components.head";
 @import "ui/components.foot";
 @import "ui/components.hero";
-@import "ui/base.forms";
-
+@import "ui/components.dash";
 
 
 // Trumps

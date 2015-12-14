@@ -1,0 +1,82 @@
+.dash-block__heading {
+	color: $black;
+}
+
+.member-header {
+	position: relative;
+	display: block;
+	color: white;
+	margin-bottom: $inuit-base-spacing-unit--large;
+	.member-img {
+		display: inline-block;
+		margin-right: $inuit-base-spacing-unit;
+		height: 120px;
+		width: 120px;
+		border-width: 1px;
+		border-style: solid;
+		border-radius: 50%;
+		border-color: transparent;
+	}
+	.member-heading {
+		margin-bottom: 0;
+	}
+	.member-date {
+		display: block;
+	}
+}
+
+
+.box--background {
+	display: block;
+	padding: 2.5em;
+	text-align: right;
+	width: 85%;
+	background-color: $yellow-light;
+	box-shadow: 0 0 $inuit-base-spacing-unit rgba(0,0,0,0.1);
+	margin-bottom: $inuit-base-spacing-unit--large;
+/*
+	&:hover {
+		transform: scale(1.01, 1.01);
+		&:after {
+			opacity: 1;
+		}
+	}
+*/
+}
+
+.content {
+	display: block;
+	text-align: left;
+	background-color: white;
+	padding: $inuit-base-spacing-unit--large;
+	width: 100%;
+	min-height: 200px;
+	background-position: 250px 120px;
+	background-size: 200px;
+	background-repeat: no-repeat;
+	color: $black;
+	cursor: pointer;
+	text-decoration: none;
+	box-sizing: content-box;
+}
+
+.content--customer-form {
+	@extend .content;
+	box-sizing: border-box;
+}
+
+.content--contact {
+	background-image: url(/assets/img/contact.png);
+}
+
+.content--search {
+	background-image: url(/assets/img/search.png);
+}
+
+.content--update {
+	background-image: url(/assets/img/update.png);
+}
+
+.content--log-out {
+	background-image: url(/assets/img/log-out.png);
+}

@@ -48,6 +48,16 @@ allow_request_return: true
             <small class="error">{{ field_errors:password_confirmation }}</small>
         {{ endif }}
     </div>
+    
+    <div class="">
+	    <input type="file" name="file_upload" value="{{ old_values:file_upload }}" id="file-upload">
+	    <label for="file_upload">Photo</label>
+	    
+	    {{ if field_errors:fle_upload }}
+            <br>
+            <small class="error">{{ field_errors:file_upload }}</small>
+        {{ endif }}
+    </div>
 
     <div>
         <input type="submit" name="submit" value="Sign up">

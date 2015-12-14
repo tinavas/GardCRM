@@ -1,10 +1,10 @@
 @charset "UTF-8";
 // Base type rules: fonts, weights, links, quotes etc.
 
-$base-font-size:    				16px;
-$base-line-height:  				24px;
+$base-font-size:    				$inuit-base-font-size;
+$base-line-height:  				$inuit-base-line-height;
 $base-font-family: 					'Varela Round', sans-serif;
-$base-font-color:					white;
+$base-font-color:					black;
 $heading-font-family: 				"bebas-neue",sans-serif;
 $display-font-family: 				'Montserrat', sans-serif;
 
@@ -14,12 +14,14 @@ $display-font-family: 				'Montserrat', sans-serif;
 	font-family: $heading-font-family;
 	font-weight: 700;
 	line-height: $base-line-height;
-	color: $dark-grey;
+	color: black;
 }
 
-html {
+body {
+	font-family: $base-font-family;
 	color: $base-font-color;
-	line-height: $base-line-height;
+	font-size: $base-font-size;
+	margin-bottom: 0;
 }
 
 /* .giga */

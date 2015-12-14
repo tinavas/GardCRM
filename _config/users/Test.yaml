@@ -1,0 +1,8 @@
+---
+email: test@test.com
+password: ""
+password_hash: $2a$08$sf5MJqsP/wd6myLDRfS5Ke1SxszMbkrbBomx6SLwkwlqJXiqmFCiS
+_uid: 4klZ2t566b7ae6bef95rl09zl51
+roles:
+  - admin
+---
