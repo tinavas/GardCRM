@@ -33,20 +33,16 @@ allowed:
   - postcode
   - country
   - notes
-  - where
-  - logo
+  - lat
+  - lon
 
 # You are not required to require fields, but once you do, any missing
 # from the POST will squash this submission and send a list of
 # missing fields to your {{ raven:errors }} tagpair
 required:
-  - member
   - title
   - contact_name
-  - company_name
   - postcode
-  - city
-  - logo
 
 submission_save_extension: md
 

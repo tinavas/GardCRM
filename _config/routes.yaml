@@ -20,7 +20,6 @@ routes:
   /member/forgotten-password : member/forgotten-password
   /member/reset-password : member/reset-password
 
-
   # ADVANCED ROUTE EXAMPLE
   # Visiting example.com/members/login will...
   # load the /templates/success.html template
