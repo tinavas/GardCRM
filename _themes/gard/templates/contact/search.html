@@ -1,0 +1,106 @@
+{{ if logged_in }}
+
+<div class="wrap">
+	<div class="layout  layout--center">
+		<div class="layout__item">
+			<form action="" method="get">
+				<label for="postcode">Postcode</label>
+				<input type="text" name="postcode" value="">
+				<button type="submit" class="btn--green">Search</button>
+			</form>
+			<hr>
+		</div>
+	</div>
+</div>
+<div class="wrap">
+	<div class="layout  layout--center">
+		<div class="layout__item">
+			
+			{{ if get:postcode }}
+			
+				{{ placid url="api.postcodes.io/postcodes/{get:postcode}" cache="0" refresh="1200" }}
+		    		{{ result }}
+						<h2>Result</h2>
+						<ul>
+							<li>Postcode: {{ postcode }}</li>
+							<li>{{ latitude }}, {{ longitude }}</li>
+							<li>{{ admin_district }}, {{ admin_county }}</li>
+						</ul>
+						<hr>
+						
+						{{ entries:listing folder="contacts" locate_with="where" center_point="{latitude},{longitude}" sort_by="distance" sort_dir="asc" }}
+							
+							<div class="layout">
+								<div class="layout__item  u-1/2-tablet-port-and-up">
+									{{ location:map_url url="{ url }" locate_with="where" open_popup="true" zoom="10" }}
+										{{ if no_results }}
+											<p>Sorry, couldn’t find a map for this.</p>
+										{{ else }}
+			    							<h3>{{ contact_name }}</h3>
+											<p>{{ postcode }}</p>
+											<p>{{ distance_km|round:1 }}miles</p>
+										{{ endif }}
+									{{ /location:map_url }} 
+								</div>
+								<div class="layout__item  u-1/2-tablet-port-and-up">
+									<p>
+										<a href="/contact/view/{{ slug }}">{{ contact_name }} - {{ city }} - {{ postcode }}</a>
+										<br>
+										{{ distance_km|round:1 }}miles {{ coordinates }}
+									</p>
+								</div>
+							</div>
+						{{ /entries:listing }}
+		
+		    		{{ /result }}
+				{{ /placid }}
+			
+			{{ else }}
+			
+				{{ entries:listing folder="contacts" }}
+				
+					{{ if no_results }}
+					
+						<div class="layout">
+							<div class="layout__item">
+								<p>You got no clients bruv.</p>	
+							</div>
+						</div>
+						
+					{{ else }}
+				
+						<div class="layout">
+							<div class="layout__item  u-1/2-tablet-port-and-up">
+								{{ location:map_url url="{ url }" locate_with="where" open_popup="true" zoom="1" }}
+									{{ if no_results }}
+										<p>Sorry, couldn’t find a map for this.</p>
+									{{ else }}
+		    							<h3>{{ contact_name }}</h3>
+										<p>{{ postcode }}</p>
+									{{ endif }}
+								{{ /location:map_url }}
+							</div>
+							<div class="layout__item  u-1/2-tablet-port-and-up">
+								<p>
+									<a href="/contact/view/{{ slug }}">{{ contact_name }} - {{ city }} - {{ postcode }}</a>
+									<br>
+									{{ distance_km|round:1 }}miles {{ coordinates }}
+								</p>
+							</div>
+						</div>
+						
+					{{ /if }}
+				
+				{{ /entries:listing }}
+			
+			{{ /if }}
+		</div>
+	</div>
+</div>
+{{ endif }}
+
+<style>
+	.map {width:100%; height: 300px; }
+</style>
+{{ location:start_maps }}
+<!-- This needs trimming down as it is currently very clunky. It also does not allow you to search via a particular segment of a postcode.  -->

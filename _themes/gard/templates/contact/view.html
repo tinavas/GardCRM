@@ -4,17 +4,18 @@
 			<div class="layout">
 			    <div class="layout__item">
 			        <div class="box--background">
-						<div class="content">
-							{{ entries:listing folder="forms" }}
+						{{ entries:listing folder="contacts" conditions="slug:{contactid}" }}
+						
+							<div class="content">
 								<p>{{ title }}</p>
 								<p>{{ contact_name }}</p>
 								<p>{{ role }}</p>
 								<p>{{ company name }}</p>
 								<p>{{ city }}</p>
 								<p>{{ title }}</p>
-							
-						</div>
-						<a href="{{ url }}">Edit</a>
+							</div>
+							<a href="/contact/edit/{{ slug }}">Edit</a>
+
 						{{ /entries:listing }}
 			        </div>
 			    </div>

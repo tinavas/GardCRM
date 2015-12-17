@@ -15,7 +15,7 @@
 			<div class="layout">
 				<div class="layout__item  u-1/2-tablet-port-and-up">
 					<div class="box--background">
-						<a class="content  content--contact" href="/member/customer-form">
+						<a class="content  content--contact" href="/contact/add">
 							<h3 class="dash-block__heading">Create Contact</h3>
 							<p>Keep 'em comming</p>
 						</a>
@@ -23,7 +23,7 @@
 				</div>
 				<div class="layout__item  u-1/2-tablet-port-and-up">
 					<div class="box--background">
-						<a class="content  content--search" href="/member/search">
+						<a class="content  content--search" href="/contact/search">
 							<h3 class="dash-block__heading">Search Contact</h3>
 							<p>Find clients and edit their info</p>
 						</a>
@@ -31,7 +31,7 @@
 				</div>
 				<div class="layout__item  u-1/2-tablet-port-and-up">
 					<div class="box--background">
-						<a class="content  content--update" href="/member/update-profile">
+						<a class="content  content--update" href="/profile">
 							<h3 class="dash-block__heading">Update Profile</h3>
 							<p>Got a fancy new name or email? Show it off here.</p>
 						</a>
@@ -49,9 +49,10 @@
 		</div>
 	</section>
 	
-	{{ elseif !logged_in }}
+{{ elseif !logged_in }}
 	
 	<h1>Sorry you are not logged in</h1>
-	<a href="/member/login" class="btn--transparent">Log in</a>
-	<a href="/member/register" class="btn--transparent">Sign up</a>
+	<a href="/login" class="btn--transparent">Log in</a>
+	<a href="/register" class="btn--transparent">Sign up</a>
+	
 {{ /if }}

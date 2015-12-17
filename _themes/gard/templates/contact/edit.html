@@ -1,0 +1,137 @@
+
+<div class="wrap">
+<div class="layout">
+    <div class="layout__item">
+        <div class="awesome-form">
+            {{ if logged_in }}
+            	<h1>Edit your customer record</h1>
+            
+				{{ theme:partial src="forms/_form_error_raven" }}
+                {{ raven:form formset="customer" edit="/contacts/{contactid}" return="/contact/search" }}
+	                <div class="">
+	                    <input type="hidden" name="member" value="{{ current_member:_uid }}" />
+	                </div>
+				
+					<div class="layout__item  u-1/2-tablet-port-and-up">
+		                <label for="postcode">Postcode</label>
+	                    <input type="text" name="postcode" value="{{ old_values:postcode }}" id="postcode" placeholder="xxxx xxx">
+	                </div>
+	                
+	                <div class="layout__item  u-1/2-tablet-port-and-up">
+						<input type="hidden" name="where[latitude]" id="lat" placeholder="lat" value="{{ old_values:where:latitude }}">
+						<input type="hidden"  name="where[longitude]" id="lon" placeholder="lon" value="{{ old_values:where:longitude }}">
+						<button id="getlatlong">get lat long</button>
+					</div>
+				
+	                <div class="">
+		                <label for="title">Title</label>
+	                    <input type="text" name="title" value="{{ old_values:title }}" id="title">
+	                </div>
+	
+	                <div class="">
+		                <label for="contact_name">Contact Name</label>
+	                    <input type="text" name="contact_name" value="{{ old_values:contact_name }}" id="contact_name">
+	                </div>
+	
+	                <div class="">
+		                <label for="role">Role</label>
+	                    <input type="text" name="role" value="{{ old_values:role }}" id="role"> <!-- will need to be select at some point -->
+	                </div>
+	
+	                <div class="">
+		                <label for="contact_phone">Contact Phone</label>
+	                    <input type="tel" name="contact_phone" value="{{ old_values:contact_phone }}" id="contact_phone">
+	                </div>
+	
+	                <div class="">
+		                <label for="contact_mobile">Contact Mobile</label>
+	                    <input type="tel" name="contact_mobile" value="{{ old_values:contact_mobile }}" id="contact_mobile">
+	                </div>
+	
+	                <div class="">
+		                <label for="contact_email">Contact Email</label>
+	                    <input type="email" name="contact_email" value="{{ old_values:contact_email }}" id="contact_email">
+	                </div>
+	
+	                <div class="">
+		                <label for="company_phone">Company Phone</label>
+	                    <input type="tel" name="company_phone" value="{{ old_values:company_phone }}" id="company_phone">
+	                </div>
+	
+	                <div class="">
+						<label for="company_fax">Company Fax</label>
+	                    <input type="tel" name="company_fax" value="{{ old_values:company_fax }}" id="company_fax">
+	                </div>
+	
+	                <div class="">
+		                <label for="company_email">Company Email</label>
+	                    <input type="email" name="company_email" value="{{ old_values:company_email }}" id="company_email">
+	                </div>
+	
+	                <div class="">
+		                <label for="website">Website</label>
+	                    <input type="url" name="website" value="{{ old_values:website }}" id="website">
+	                </div>
+	
+	                <div class="">
+		                <label for="company_name">Company Name</label>
+	                    <input type="text" name="company_name" value="{{ old_values:company_name }}" id="company_name">
+	                </div>
+	
+	                <div class="">
+		                <label for="customer_number">Customer Number</label>
+	                    <input type="number" name="customer_number" value="{{ old_values:customer_number }}" id="customer_number">
+	                </div>
+	
+	                <div class="">
+		                <label for="address_line_1">Address Line 1</label>
+	                    <input type="text" name="address_line_1" value="{{ old_values:address_line_1 }}" id="address_line_1">
+	                </div>
+	
+	                <div class="">
+		                <label for="address_line_2">Address Line 2</label>
+	                    <input type="text" name="address_line_2" value="{{ old_values:address_line_2 }}" id="address_line_2">
+	                </div>
+	
+	                <div class="">
+		                <label for="address_line_3">Address Line 3</label>
+	                    <input type="text" name="address_line_3" value="{{ old_values:address_line_3 }}" id="address_line_3">
+	                </div>
+	
+	                <div class="">
+		                <label for="city">City</label>
+	                    <input type="text" name="city" value="{{ old_values:city }}" id="city">
+	                </div>
+	
+	                <div class="">
+		                <label for="region">Region</label>
+	                    <input type="text" name="region" value="{{ old_values:region }}" id="region"> <!-- will need to be select at some point -->
+	                </div>
+	
+	<!--
+	                <div class="">
+		                <label for="postcode">Postcode</label>
+	                    <input type="text" name="postcode" value="{{ old_values:postcode }}" id="postcode" placeholder="xxxx xxx">
+	                </div>
+	-->
+	
+	                <div class="">
+		                <label for="country">Country</label>
+	                    <input type="text" name="country" value="{{ old_values:country }}" id="country"> <!-- will need to be select at some point -->
+	                </div>
+	
+	                <div class="">
+		                <label for="notes">Notes</label>
+	                    <input type="textarea" name="notes" value="{{ old_values:notes }}" id="notes">
+	                </div>
+	
+	                    <input type="submit" value="Submit">
+	                <br>
+            
+                {{ /raven:form }}
+            {{ endif }}
+
+        </div>
+    </div>
+</div>
+</div>

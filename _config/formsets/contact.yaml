@@ -1,0 +1,37 @@
+###########################################################################################
+#
+#  EXAMPLE RAVEN FORMSET
+#
+#  Formsets can override any default settings (raven.yaml) EXCEPT master_killswitch
+#
+###########################################################################################
+
+# Location (from root) to save form submissions
+submission_save_path: _content/contacts/
+filename_format: "{{ year }}-{{ month }}-{{ day }}_{{ hour }}{{ minute }}{{ second }}"
+submission_save_extension: md
+
+# Fields allowed to be submitted in the form, automatically
+# purging anything and everything else
+allowed:
+  - member
+  - contact_name
+  - postcode
+  - where
+
+# You are not required to require fields, but once you do, any missing
+# from the POST will squash this submission and send a list of
+# missing fields to your {{ raven:errors }} tagpair
+required:
+  - member
+  - contact_name
+  - postcode
+  - where
+
+datestamp_format: "m/d/Y"
+
+control_panel:
+  fields:
+    - contact_name
+    - email
+    - postcode
