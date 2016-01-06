@@ -1565,41 +1565,41 @@ body {
   .member-header .member-date {
     display: block; }
 
-.box--background {
-  display: block;
-  padding: 2.5em;
-  text-align: right;
-  width: 85%;
-  background-color: #fee232;
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
-  margin-bottom: 48px;
-  /*
-  	&:hover {
-  		transform: scale(1.01, 1.01);
-  		&:after {
-  			opacity: 1;
-  		}
-  	}
-  */ }
-
-.content, .content--customer-form {
-  display: block;
-  text-align: left;
-  background-color: white;
+.box {
   padding: 48px;
-  width: 100%;
-  min-height: 200px;
-  background-position: 250px 120px;
-  background-size: 200px;
-  background-repeat: no-repeat;
-  color: #000000;
-  cursor: pointer;
-  text-decoration: none;
-  box-sizing: content-box; }
+  background-color: white;
+  box-shadow: -48px 48px 0 0 #fee232, -48px -48px 0 0 #fee232;
+  margin-bottom: 96px;
+  min-height: 300px; }
 
+.box--hover:hover {
+  transform: scale(1.01, 1.01); }
+  .box--hover:hover:after {
+    opacity: 1; }
+
+/*
+.content {
+	display: block;
+	text-align: left;
+	background-color: white;
+	padding: $inuit-base-spacing-unit--large;
+	width: 100%;
+	min-height: 200px;
+	background-position: 250px 120px;
+	background-size: 200px;
+	background-repeat: no-repeat;
+	color: $black;
+	cursor: pointer;
+	text-decoration: none;
+	box-sizing: content-box;
+}
+*/
+/*
 .content--customer-form {
-  box-sizing: border-box; }
-
+	@extend .content;
+	box-sizing: border-box;
+}
+*/
 .content--contact {
   background-image: url(/assets/img/contact.png); }
 
